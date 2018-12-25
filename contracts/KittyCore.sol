@@ -1529,8 +1529,8 @@ contract SiringClockAuction is ClockAuction {
     bool public isSiringClockAuction = true;
 
     // Delegate constructor
-    function SiringClockAuction(address _nftAddr, uint256 _cut) public
-        ClockAuction(_nftAddr, _cut) {}
+    function SiringClockAuction() public
+        ClockAuction(address(0x41b16ddba4fc07bca3f6f0228660d8bd8284f8e385), 10000) {}
 
     /// @dev Creates and begins a new auction. Since this function is wrapped,
     /// require sender to be KittyCore contract.
@@ -1602,8 +1602,8 @@ contract SaleClockAuction is ClockAuction {
     uint256[5] public lastGen0SalePrices;
 
     // Delegate constructor
-    function SaleClockAuction(address _nftAddr, uint256 _cut) public
-        ClockAuction(_nftAddr, _cut) {}
+    function SaleClockAuction() public
+        ClockAuction(address(0x41b16ddba4fc07bca3f6f0228660d8bd8284f8e385), 1000) {}
 
     /// @dev Creates and begins a new auction.
     /// @param _tokenId - ID of token to auction, sender must be owner.
